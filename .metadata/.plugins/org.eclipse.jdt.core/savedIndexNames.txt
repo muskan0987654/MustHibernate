@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+C:\Users\muska\Documents\workspace-spring-tool-suite-4-4.24.0.RELEASE\MuskanHibernate\.metadata\.plugins\org.eclipse.jdt.core
+873825463.index
+1392092008.index
+655694228.index
+1865797976.index
+1735052290.index
