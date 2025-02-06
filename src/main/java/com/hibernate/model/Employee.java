@@ -1,13 +1,25 @@
 package com.hibernate.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+
+@Entity (name="Emp_Details")
 public class Employee {
 	
+	@Id
 	int id;
-	private String name,gender;
+	@Column(name="Emp_Name")
+	private String name;
+	@Column(name="Emp_Gender")
+	String gender;
+	@Column(name="Emp_Salary")
 	int salary;
 	
-	public Employee( String name, String gender, int salary) {
+	public Employee(int id, String name, String gender, int salary) {
 		super();
+		this.id=id;
 		this.name = name;
 		this.gender = gender;
 		this.salary = salary;
