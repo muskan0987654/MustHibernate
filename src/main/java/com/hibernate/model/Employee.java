@@ -2,6 +2,8 @@ package com.hibernate.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 
@@ -9,7 +11,8 @@ import jakarta.persistence.Id;
 public class Employee {
 	
 	@Id
-	int id;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	int id; 
 	@Column(name="Emp_Name")
 	private String name;
 	@Column(name="Emp_Gender")
@@ -17,9 +20,9 @@ public class Employee {
 	@Column(name="Emp_Salary")
 	int salary;
 	
-	public Employee(int id, String name, String gender, int salary) {
+	public Employee( String name, String gender, int salary) {
 		super();
-		this.id=id;
+//		this.id=id;
 		this.name = name;
 		this.gender = gender;
 		this.salary = salary;

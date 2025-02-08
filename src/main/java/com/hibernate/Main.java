@@ -11,12 +11,12 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Employee Karishma=new Employee(1,"Karishma","Female",55000);   //persistence object
+		Employee Mohini=new Employee("Mohini","Female",55000);   //persistence object
 		Configuration cfg=new Configuration().configure("hibernate.cfg.xml");
 		SessionFactory sf=cfg.buildSessionFactory();
 		Session session=sf.openSession();
 		Transaction tx=session.beginTransaction();
-		session.save(Karishma);
+		session.save(Mohini);
 		tx.commit(); 
 	
 	} 
