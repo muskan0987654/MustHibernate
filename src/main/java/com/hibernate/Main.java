@@ -15,22 +15,29 @@ public class Main {
 		Session session=HibernateConfiguration.getSessionFactory().openSession();
 		Transaction tx=session.beginTransaction();
 		
-		Address ad=new Address();
-		ad.setCity("Delhi");
-		ad.setState("Delhi");
-		Employee Kashish=new Employee("Kashish","Female",44000);
-		
-		
-		Kashish.setAddress(ad);
-		ad.setEmployee(Kashish);
-		
-		
-		session.persist(Kashish);
-//		session.persist(ad);      //we use here mappedby annotation so we can connect 2 tables with 1 foreign key
+//2		Address ad=new Address();
+//		ad.setCity("Delhi");
+//		ad.setState("Delhi");
+//		Employee Kashish=new Employee("Kashish","Female",44000);
+//		
+//		
+//		Kashish.setAddress(ad);
+//		ad.setEmployee(Kashish);
+//		
+//		
+//		session.persist(Kashish);
+//1		session.persist(ad);      //we use here mappedby annotation so we can connect 2 tables with 1 foreign key
 		
 		tx.commit();
 		
 		
+//		Employee employee=session.get(Employee.class,1);
+//		System.out.println(employee);
+//		System.out.println(employee.getAddress());
+		
+		Address address=session.get(Address.class, 1);
+		System.out.println(address);
+		System.out.println(address.getEmployee());
 	} 
 
 }
