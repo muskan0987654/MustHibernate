@@ -11,27 +11,15 @@ import org.hibernate.cfg.Configuration;
 
 
 
-import com.hibernate.model.Employee;
+import com.hibernate.model.Customer;
+import com.hibernate.model.Products;
+
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		Employee Karishma=new Employee("Karishma","Female",55000);   //persistence object
-//		Configuration cfg=new Configuration().configure("hibernate.cfg.xml");
-//		SessionFactory sf=cfg.buildSessionFactory();
-//		SessionFactory sf=new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
-		
-		
-		StandardServiceRegistry ssr=new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
-		Metadata meta=new MetadataSources(ssr).getMetadataBuilder().build();
-		SessionFactory sf=meta.buildSessionFactory();
-		
-		
-		Session session=sf.openSession();
-		Transaction tx=session.beginTransaction();
-		session.save(Karishma);
-		tx.commit();
+	
 		
 	} 
 
