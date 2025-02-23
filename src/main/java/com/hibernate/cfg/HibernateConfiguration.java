@@ -18,7 +18,7 @@ public class HibernateConfiguration {
 		ps.put(Environment.URL, "jdbc:mysql://localhost:3306/mdb");
 		ps.put(Environment.USER, "root");
 		ps.put(Environment.PASS, "root@1234");
-		ps.put(Environment.HBM2DDL_AUTO, "true");
+		ps.put(Environment.HBM2DDL_AUTO, "create");
 		ps.put(Environment.SHOW_SQL, "true");
 		ps.put(Environment.FORMAT_SQL, "true");
 

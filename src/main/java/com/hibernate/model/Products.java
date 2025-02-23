@@ -23,11 +23,10 @@ public class Products {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Products(int id, String items, Customer customer) {
+	public Products( String items) {
 		super();
-		this.id = id;
 		this.items = items;
-		this.customer = customer;
+		
 	}
 
 	public int getId() {

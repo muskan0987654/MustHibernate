@@ -18,7 +18,7 @@ public class Customer {
 	private String name,gender;
 	int amount;
 	
-	@OneToMany
+	@OneToMany(mappedBy="customer")
 	List<Products> products;
 	
 	public Customer( String name, String gender, int amount,List<Products> address) {
@@ -35,7 +35,7 @@ public class Customer {
 	}
 
 
-	public void setAddress(List<Products> products) {
+	public void setProducts(List<Products> products) {
 		this.products = products;
 	}
 
@@ -75,7 +75,7 @@ public class Customer {
 		return amount;
 	}
 
-	public void setSalary(int amount) {
+	public void setAmount(int amount) {
 		this.amount = amount;
 	}
 
