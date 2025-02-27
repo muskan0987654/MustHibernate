@@ -58,6 +58,8 @@ public class Main {
 		c1.setProducts(p);
 		
 		session.persist(c1);
+		
+		
 		tx.commit();
 		
 	} 
