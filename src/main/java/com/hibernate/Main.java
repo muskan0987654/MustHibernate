@@ -28,19 +28,19 @@ public class Main {
 		Employee e1=new Employee();
 		e1.setName("Komal");
 		e1.setGender("Female");
-		e1.setSalary(45000);
+		e1.setSalary(35000);
 		Employee e2=new Employee();
-		e2.setName("Komal");
+		e2.setName("Kirti");
 		e2.setGender("Female");
-		e2.setSalary(45000);
+		e2.setSalary(40000);
 		Employee e3=new Employee();
-		e3.setName("Komal");
+		e3.setName("Karishma");
 		e3.setGender("Female");
-		e3.setSalary(45000);
+		e3.setSalary(50000);
 		Employee e4=new Employee();
-		e4.setName("Komal");
+		e4.setName("Kusum");
 		e4.setGender("Female");
-		e4.setSalary(45000);
+		e4.setSalary(55000);
 		
 		
 		List <Employee> e=new ArrayList<>();
@@ -55,14 +55,14 @@ public class Main {
 		p1.setCity("Noida");
 		p1.setState("UP");
 		Address p2=new Address();
-		p2.setCity("Noida");
-		p2.setState("UP");
+		p2.setCity("karnal");
+		p2.setState("Haryana");
 		Address p3=new Address();
-		p3.setCity("Noida");
-		p3.setState("UP");
+		p3.setCity("Kurukshetra");
+		p3.setState("Haryana");
 		Address p4=new Address();
-		p4.setCity("Noida");
-		p4.setState("UP");
+		p4.setCity("Delhi");
+		p4.setState("Delhi");
 		
 		
 		session.persist(p1);
