@@ -1,48 +1,48 @@
 package com.hibernate.model;
 
-
 import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Customer {
-	
+public class Employee {
+
 	@Id
 	@GeneratedValue( strategy=GenerationType.IDENTITY)
 	int id;
 	private String name,gender;
-	int amount;
+	int salary;
 	
-	@OneToMany(mappedBy="customer")
-	List<Products> products;
+	@ManyToMany //(mappedBy="Employee")
+	List<Address> address;
 	
-	public Customer( String name, String gender, int amount,List<Products> address) {
+	public Employee( String name, String gender, int salary,List<Address> address) {
 		super();
 		this.name = name;
 		this.gender = gender;
-		this.amount = amount;
-		this.products=products;
+		this.salary = salary;
+		this.address=address;
 	}
 	
 	
-	public List<Products> getProducts() {
-		return products;
+	public List<Address> getAddress() {
+		return address;
 	}
 
 
-	public void setProducts(List<Products> products) {
-		this.products = products;
+	public void setAddress(List<Address> address) {
+		this.address = address;
 	}
 
 
 
 
-	public Customer() {
+	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -71,21 +71,17 @@ public class Customer {
 		this.gender = gender;
 	}
 
-	public int getAmount() {
-		return amount;
+	public int getSalary() {
+		return salary;
 	}
 
-	public void setAmount(int amount) {
-		this.amount = amount;
+	public void setSalary(int salary) {
+		this.salary = salary;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", amount=" + amount + "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", salary=" + salary + "]";
 	}
 	
-	
-	
-
 }
-
