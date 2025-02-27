@@ -64,35 +64,29 @@ public class Main {
 		p4.setCity("Delhi");
 		p4.setState("Delhi");
 		
-		
-		session.persist(p1);
-		session.persist(p2);
-		session.persist(p3);
-		session.persist(p4);
-				
+			
 		List <Address> p=new ArrayList<>();
 		p.add(p1);
 		p.add(p2);
 		p.add(p3);
 		p.add(p4);
 		
-	
-		e2.setAddress(p);
-		e1.setAddress(p);
-		p1.setEmployee(e);
-		p2.setEmployee(e);
-		
-		
-
-		
+		session.persist(p1);
+		session.persist(p2);
+		session.persist(p3);
+		session.persist(p4);
 		
 		session.persist(e1);
 		session.persist(e2);
 		session.persist(e3);
 		session.persist(e4);
-		
-		
-		
+	
+		e2.setAddress(p);
+		e1.setAddress(p);
+		p1.setEmployee(e);
+		p2.setEmployee(e);
+	
+	
 
 		tx.commit();
 		
